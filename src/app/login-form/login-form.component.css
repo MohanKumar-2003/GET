@@ -7,8 +7,10 @@ form{
     border-radius:5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-login{
-    margin:100px auto;
+.login{
+    margin:50px;
+    text-align: center;
+  
 }
 div{
     margin-bottom: 15px;
