@@ -19,8 +19,8 @@ formgp:FormGroup;
 constructor(private fb:FormBuilder, private http:HttpClient){
   this.formgp=this.fb.group({
       username1:['', Validators.required],
-      userid1:['',Validators.required],
-      lastname1:['',Validators.required],
+      // userid1:['',Validators.required],
+      // lastname1:['',Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]],
       
 

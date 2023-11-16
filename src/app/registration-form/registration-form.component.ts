@@ -22,7 +22,7 @@ form:FormGroup;
 
 constructor(private fb:FormBuilder, private http:HttpClient){
     this.form=this.fb.group({
-        userid:['',Validators.required],
+        // userid:['',Validators.required],
         lastname:['',Validators.required],
         username:['', Validators.required],
         gender:['', Validators.required],
