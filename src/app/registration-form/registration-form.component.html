@@ -6,7 +6,7 @@
     <input type="text" id="userid" formControlName="userid">
   </div> -->
   <div>
-    <label for="username">UserName :</label>
+    <label for="username">UserName (FirstName) :</label>
     <input type="text" id="username" formControlName="username">
   </div>
   <div>
@@ -61,7 +61,31 @@
         </div>
       </div>
     </div>
-
+   
+    <div class="role-selection">
+      <label id="r">
+        <input id="radio" type="radio" name="role" value="user" [checked]="selectedRole === 'user'"
+        (change)="updateSelectedRole('user')">
+        USER
+      </label>
+      <label id="r">
+        <input id="radio" type="radio" name="role" value="toc" [checked]="selectedRole === 'toc'"
+        (change)="updateSelectedRole('toc')">
+        TOC
+      </label>
+      <label id="r">
+        <input id="radio" type="radio" name="role" value="admin" [checked]="selectedRole === 'admin'"
+        (change)="updateSelectedRole('admin')">
+        ADMIN
+      </label>
+    
+      <label id="r">
+        <input id="radio" type="radio" name="role" value="manager" [checked]="selectedRole === 'manager'"
+        (change)="updateSelectedRole('manager')">
+        MANAGER
+      </label>
+    </div>
+    
     <button type="submit" >Submit</button>
 
 </form>

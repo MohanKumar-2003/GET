@@ -11,6 +11,8 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class RegistrationFormComponent{
+    selectedRole: string = 'user'; 
+    r:string[]=[];
     value:any;
     locations:string[]=['Tamilnadu','AP'];
     colleges:{[key:string]:string[]}={
@@ -21,6 +23,7 @@ form:FormGroup;
     
 
 constructor(private fb:FormBuilder, private http:HttpClient){
+    
     this.form=this.fb.group({
         // userid:['',Validators.required],
         lastname:['',Validators.required],
@@ -34,7 +37,7 @@ constructor(private fb:FormBuilder, private http:HttpClient){
         location:new FormControl(''),
         college:new FormControl('')
     })
-   
+
 
 }
 getColleges(){
@@ -56,5 +59,13 @@ submitForm() {
         
         }
       } 
-    
+
+      
+  updateSelectedRole(role: string): void {
+    this.selectedRole = role;
+    console.log('Selected Role:', this.selectedRole);
+    this.r.push(role);
+    console.log(this.r);
+  }
+
 }
