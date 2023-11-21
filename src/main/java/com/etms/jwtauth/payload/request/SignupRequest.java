@@ -1,24 +1,73 @@
 package com.etms.jwtauth.payload.request;
 
+import java.util.Date;
 import java.util.Set;
 
 import jakarta.validation.constraints.*;
 
 public class SignupRequest {
-  @NotBlank
-  @Size(min = 3, max = 20)
+
   private String username;
 
-  @NotBlank
-  @Size(max = 50)
-  @Email
+
+
   private String email;
 
   private Set<String> role;
 
-  @NotBlank
-  @Size(min = 6, max = 40)
+
   private String password;
+  private String lastname;
+  private String gender;
+
+
+  private Date dob;
+
+  private String collegeloc;
+
+  private String collegename;
+
+  public String getLastname() {
+    return lastname;
+  }
+
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
+  }
+
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
+  public Date getDob() {
+    return dob;
+  }
+
+  public void setDob(Date dob) {
+    this.dob = dob;
+  }
+
+  public String getCollegeloc() {
+    return collegeloc;
+  }
+
+  public void setCollegeloc(String collegeloc) {
+    this.collegeloc = collegeloc;
+  }
+
+  public String getCollegename() {
+    return collegename;
+  }
+
+  public void setCollegename(String collegename) {
+    this.collegename = collegename;
+  }
+
+
 
   public String getUsername() {
     return username;
