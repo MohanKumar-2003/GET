@@ -33,7 +33,7 @@ public class SignupRequest {
 
   public void setLastname(String lastname) {
     this.lastname = lastname;
-  }
+  }//commit
 
   public String getGender() {
     return gender;
