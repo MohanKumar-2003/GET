@@ -37,7 +37,7 @@ constructor(private fb:FormBuilder, private http:HttpClient,private userdetails:
         // colleges:['', Validators.required],
         collegeloc:new FormControl(''),
         collegename:new FormControl(''),
-        roles:[this.r]
+        role:[this.r]
     })
 
 
